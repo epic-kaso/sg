@@ -80,6 +80,13 @@
             <a class="list-group-item" ui-sref-active="active" ui-sref="addDevice">Add Device</a>
             <a class="list-group-item" ui-sref-active="active" ui-sref="addNetwork">Add Network</a>
         </div>
+
+        <div class="list-group">
+            <a class="list-group-item" href="{{ route('logout') }}">
+                Logout
+            </a>
+        </div>
+
     </div>
 
     <div class="col-md-9">

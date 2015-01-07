@@ -11,13 +11,17 @@
     |
     */
 
-    Route::get('/', 'HomeController@index');
+    Route::get('/', ['as' => 'home','uses' => 'HomeController@index']);
     Route::get('/swap','GadgetSwapController@getClient');
     Route::controller('/enterprise','EnterprisePagesController');
 
     Route::get('/login',['uses' => 'AuthController@getLogin','as' => 'get-login']);
     Route::post('/login',['uses' => 'AuthController@postLogin','as' => 'post-login']);
 
+    Route::get('/logout',['as' =>'logout',function(){
+        Auth::logout();
+        return Redirect::home();
+    }]);
    Route::group(['before' => 'auth'],function(){
            Route::get('/devices',['as' => 'devices','uses' => 'GadgetSwapController@getIndex']);
            Route::post('/devices/add-maker','GadgetSwapController@postAddMake');

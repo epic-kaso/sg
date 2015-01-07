@@ -18,12 +18,14 @@ class UserSeeder extends Seeder
     {
         Eloquent::unguard();
 
-        $user = User::firstOrCreate(
-            [
-                'email' => 'admin@supergeeks.com.ng',
-                'password' => 'Superg33ks',
-                'type' => "admin"
-            ]);
+        if(!User::first(['email' => 'admin@supergeeks.com.ng'])) {
+            $user = User::Create(
+                [
+                    'email'    => 'admin@supergeeks.com.ng',
+                    'password' => 'Superg33ks',
+                    'type'     => "admin"
+                ]);
+        }
 
     }
 
