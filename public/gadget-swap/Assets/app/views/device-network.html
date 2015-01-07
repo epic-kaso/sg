@@ -15,7 +15,7 @@
                    class="swap-location device-model-item"
                    ng-repeat="network in networks"
                    ng-click="selectNetwork($event,network,'device-condition')" >
-                    <img ng-src="/Assets/img/{{ network.slug }}.jpg" class="center img-rounded img-responsive" />
+                    <img ng-src="{{ app_data.image_asset_root + '/' + network.slug }}.jpg" class="center img-rounded img-responsive" />
                     <h3>{{ network.name }}</h3>
                 </a>
             </div>

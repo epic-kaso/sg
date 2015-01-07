@@ -1,6 +1,6 @@
 <div class="row text-center">
     <div class="col-sm-4 device-model">
-        <img ng-src="/Assets/img/{{ image_url }}" class="center img-rounded img-responsive" />
+        <img ng-src="{{ app_data.image_asset_root + '/' + image_url }}" class="center img-rounded img-responsive" />
         <h3>{{ image_label }}</h3>
     </div>
     <div class="col-sm-8">

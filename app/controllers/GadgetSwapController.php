@@ -7,10 +7,94 @@ class GadgetSwapController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function getClient()
 	{
-		return View::make('gadget-swap.client.index');
+        $ms = GadgetMaker::get();
+        $networks = Network::get();
+
+        if (empty($model)) {
+            $ds = Gadget::get();
+        } else {
+            $ds = GadgetMaker::find($model)->gadgets;
+        }
+
+        $data = array(
+            'models' => array(),
+            'devices' => array(),
+            'networks' => array()
+        );
+
+        foreach($networks as $t){
+            $t->slug =  strtolower(Str::slug($t->name));
+            $data['networks'][] = $t;
+        }
+
+        foreach ($ms as $t) {
+            $t->image_url = strtolower($t->name) . '.png';
+            $t->slug = Str::slug($t->name);
+            $data['models'][] = $t;
+        }
+        foreach ($ds as $t) {
+            $t->colors = $this->fetch_client_array($t->colors);
+            $t->sizes = $this->fetch_client_array($t->sizes);
+            $t->base_line_prices = $this->fetch_client_array($t->base_line_prices);
+            $t->slug = Str::slug($t->model);
+            $data['devices'][] = $t;
+        }
+		return View::make('gadget-swap.client.index',['objects' => $data]);
 	}
+    
+    function postSwapDetails(){
+        /*
+         * {
+         * "device":{
+             *  "make":"Apple",
+             *  "current_make":{"id":1},
+             *  "model":{"id":15,"model":"Iphone 4s"},
+             *  "size":{"id":27,"gadget_id":15,"name":"","value":"16gb","baseline_price":0,"slug":"16gb"},
+             *  "baseLinePrice":"15000",
+             *  "network":{"id":1,"name":"Airtel Ng","description":"Get Extra 1 gigabyte of data when you swap your phone"},
+             *  "condition":"Like-New","condition_value":100
+         *  },
+         * "user":{
+         *      "email":"lordkaso@gmail.com"
+         *  }
+         * }
+         */
+        $app = $this->getApp();
+        //$details = $app->request->params();
+        $json_input_data = json_decode(file_get_contents('php://input'),TRUE);
+
+        $user = new \User();
+        $user->email = $json_input_data['user']['email'];
+        $user->phone = $json_input_data['user']['phone'];
+        $user->device_make = $json_input_data['device']['make'];
+        $user->device_model = $json_input_data['device']['model']['id'];
+        $user->device_size = $json_input_data['device']['size']['id'];
+        $user->device_network = $json_input_data['device']['network']['id'];
+        $user->device_condition = $json_input_data['device']['condition'];
+        $user->swap_location = $json_input_data['device']['swap_location'];
+        $user->device_reward = $json_input_data['device']['reward'];
+
+        $user->save();
+
+        $app->response->header('content-type','application/json');
+        $app->response->write($user->to_json());
+    }
+    private function fetch_client_array($colors) {
+        $r = array();
+        if(count($colors) > 0) {
+            foreach ($colors as $v) {
+                if (isset($v->value))
+                    $v->slug = Str::slug($v->value);
+                elseif (isset($v->name))
+                    $v->slug = Str::slug($v->name);
+                $r[] = $v;
+            }
+        }
+        return $r;
+    }
+    //Server
 
     function getIndex() {
         $model = Input::get('model', null);
@@ -154,9 +238,11 @@ class GadgetSwapController extends \BaseController {
 
     private function fetch_array($colors) {
         $r = array();
-        foreach ($colors as $v) {
-            $v->slug = Str::slug($v->value);
-            $r[] = $v;
+        if(count($colors) > 0){
+            foreach ($colors as $v) {
+                $v->slug = Str::slug($v->value);
+                $r[] = $v;
+            }
         }
         return $r;
     }
