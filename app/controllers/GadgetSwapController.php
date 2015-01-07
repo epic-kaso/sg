@@ -30,7 +30,7 @@ class GadgetSwapController extends \BaseController {
         }
 
         foreach ($ms as $t) {
-            $t->image_url = strtolower($t->name) . '.png';
+            $t->image_url = strtolower($t->name) . '-logo.png';
             $t->slug = Str::slug($t->name);
             $data['models'][] = $t;
         }
