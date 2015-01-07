@@ -35,6 +35,10 @@
         .image-item {
             margin: 5px;  display: inline-block;  float: left;
         }
+        .panel-body.image-roll {
+            height: 300px;
+            overflow-x: scroll;
+        }
 
     </style>
 </head>
