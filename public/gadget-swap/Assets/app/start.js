@@ -66,7 +66,7 @@ app.run(function ($rootScope, CurrentGadget,GadgetsInfoServ,$location,PreloadTem
     })
 });
 
-app.constant('ViewBaseURL','/Assets/app/views');
+app.constant('ViewBaseURL','/gadget-swap/Assets/app/views');
 
 app.config(function ($stateProvider, $urlRouterProvider,ViewBaseURL) {
     $urlRouterProvider.when(

@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('gadget-swap/Assets/css/bootstrap.min.css') }}">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/Assets/css/main.css">
+    <link rel="stylesheet" href="{{ asset('gadget-swap/Assets/css/main.css') }}">
     <script>
         window.gadget_swap = {};
-        window.gadget_swap.data = <?= json_encode($objects) ?>;
+        window.gadget_swap.data = {{ json_encode($objects) }};
     </script>
 </head>
 <body>
@@ -108,19 +108,19 @@
         </div>
     </div>
 </div>
-<script src="/Assets/app/models/Gadget.js"></script>
+<script src="{{ asset('gadget-swap/Assets/app/models/Gadget.js') }}"></script>
 
-<script src="/Assets/app/vendor/angular.min.js"></script>
-<script src="/Assets/app/vendor/angular-cookies.min.js"></script>
-<script src="/Assets/app/vendor/angular-animate.min.js"></script>
-<script src="/Assets/app/vendor/angular-ui-router.min.js"></script>
-<script src="/Assets/app/vendor/ui-bootstrap.js"></script>
-<script src="/Assets/app/vendor/angular-bootstrap-checkbox.js"></script>
+<script src="{{ asset('gadget-swap/Assets/app/vendor/angular.min.js') }}"></script>
+<script src="{{ asset('gadget-swap/Assets/app/vendor/angular-cookies.min.js') }}"></script>
+<script src="{{ asset('gadget-swap/Assets/app/vendor/angular-animate.min.js') }}"></script>
+<script src="{{ asset('gadget-swap/Assets/app/vendor/angular-ui-router.min.js') }}"></script>
+<script src="{{ asset('gadget-swap/Assets/app/vendor/ui-bootstrap.js') }}"></script>
+<script src="{{ asset('gadget-swap/Assets/app/vendor/angular-bootstrap-checkbox.js') }}"></script>
 
-<script src="/Assets/app/controllers/Controllers.js"></script>
-<script src="/Assets/app/services/Services.js"></script>
-<script src="/Assets/app/Directives/directives.js"></script>
+<script src="{{ asset('gadget-swap/Assets/app/controllers/Controllers.js') }}"></script>
+<script src="{{ asset('gadget-swap/Assets/app/services/Services.js') }}"></script>
+<script src="{{ asset('gadget-swap/Assets/app/Directives/directives.js') }}"></script>
 
-<script src="/Assets/app/start.js"></script>
+<script src="{{ asset('gadget-swap/Assets/app/start.js') }}"></script>
 </body>
 </html>
