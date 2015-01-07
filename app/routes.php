@@ -15,6 +15,12 @@
 
     Route::get('/gadget-swap','GadgetSwapController@index');
 
+    Route::get('/devices','GadgetSwapController@getIndex');
+    Route::post('/devices/add-maker','GadgetSwapController@postAddMake');
+    Route::post('/devices/add-network','GadgetSwapController@postAddNetwork');
+    Route::post('/devices/add-device','GadgetSwapController@postAddModel');
+    Route::delete('/devices/delete-device/{id}','GadgetSwapController@deleteGadget');
+
     Route::get('/{anything}', function ($anything) {
         try {
             return View::make('pages.' . $anything);
