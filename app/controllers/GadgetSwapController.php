@@ -9,7 +9,7 @@ class GadgetSwapController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return View::make('gadget-swap.client.index');
 	}
 
 

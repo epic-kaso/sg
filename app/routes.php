@@ -12,9 +12,9 @@
     */
 
     Route::get('/', 'HomeController@index');
-    Route::get('/gadget-swap',function(){
-        return View::make('pages.index');
-    });
+
+    Route::get('/gadget-swap','GadgetSwapController@index');
+
     Route::get('/{anything}', function ($anything) {
         try {
             return View::make('pages.' . $anything);
