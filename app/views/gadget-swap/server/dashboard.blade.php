@@ -317,7 +317,7 @@
     });
 
     app.factory('ImageFetcher',function($http,$q){
-       var searchUrl = "https://www.googleapis.com/customsearch/v1?key=AIzaSyDa3bBU9KzRRnnj6KHKJlB6Pc1oc9Ivs7Y&cx=011505858740112002603:dap5yb7naau&q=";
+       var searchUrl = "https://www.googleapis.com/customsearch/v1?key=AIzaSyAJ_8QtWECvWTcrukqvfLmRWdARJ2bI2rk&cx=011505858740112002603:dap5yb7naau&q=";
 
         return {
             fetch: function(query){
