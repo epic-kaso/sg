@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
     {
         Eloquent::unguard();
 
-        $user = User::firstOrCreate(['email' => 'admin@supergeeks.com','password' => 'Superg33ks']);
+        $user = User::firstOrCreate(['email' => 'admin@supergeeks.com.ng','password' => 'Superg33ks']);
         $user->type = "admin";
         $user->save();
 
