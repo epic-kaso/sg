@@ -9,7 +9,7 @@
 
         <div class="row">
             <div class="medium-8 column">
-                <img src="/img/Supergeeks-about-display-1.jpg" alt="SuperGeeks Customer story">
+                <img src="{{ asset('img/Supergeeks-about-display-1.jpg') }}" alt="SuperGeeks Customer story">
             </div>
 
             <div class="medium-4 column">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="medium-6 large-5 column end">
-                <img src="/img/Supergeeks-about-display-2.jpg" alt="SuperGeeks Customer Story 2">
+                <img src="{{ asset('img/Supergeeks-about-display-2.jpg') }}" alt="SuperGeeks Customer Story 2">
             </div>
 
             <div class="medium-12 column">
@@ -58,7 +58,7 @@
             </div>
 
             <div class="medium-12">
-                <img src="/img/Supergeeks-about-display-3.jpg" alt="SuperGeeks Customer Story 3">
+                <img src="{{ asset('img/Supergeeks-about-display-3.jpg') }}" alt="SuperGeeks Customer Story 3">
             </div>
         </div>
     </div>

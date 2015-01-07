@@ -16,25 +16,25 @@
 
         <div class="row product-icons">
             <div class="col-sm-6 col-lg-3">
-                <img src="/img/phone-tablets.svg" alt="">
+                <img src="{{ asset('img/phone-tablets.svg') }}" alt="">
 
                 <p>Mobile Phones and Tablets</p>
             </div>
 
             <div class="col-sm-6 col-lg-3">
-                <img src="/img/laptops.svg" alt="">
+                <img src="{{ asset('img/laptops.svg') }}" alt="">
 
                 <p>Laptops and Pcs</p>
             </div>
 
             <div class="col-sm-6 col-lg-3">
-                <img src="/img/audio-visual.svg" alt="">
+                <img src="{{ asset('img/audio-visual.svg') }}" alt="">
 
                 <p>Home Theaters and Stereos</p>
             </div>
 
             <div class="col-sm-6 col-lg-3">
-                <img src="/img/home-electronics.svg" alt="">
+                <img src="{{ asset('img/home-electronics.svg') }}" alt="">
 
                 <p>Refrigerators and Washing Machines</p>
             </div>
@@ -69,18 +69,18 @@
                 <h3>Brands we fix</h3>
 
                 <p>
-                    <img src="/img/apple.jpg" alt="Apple" width="80">
-                    <img src="/img/blackberry.jpg" alt="Blackberry" width="80">
-                    <img src="/img/hp.jpg" alt="HP" width="80">
-                    <img src="/img/dell.jpg" alt="Dell" width="80">
-                    <img src="/img/samsung.jpg" alt="Samsung" width="80">
-                    <img src="/img/panasonic.jpg" alt="Panasonic" width="80">
-                    <img src="/img/htc.jpg" alt="HTC" width="80">
-                    <img src="/img/motorola.jpg" alt="Motorola" width="80">
-                    <img src="/img/nokia.jpg" alt="Nokia" width="80">
-                    <img src="/img/sony.jpg" alt="Sony" width="80">
-                    <img src="/img/microsoft.jpg" alt="Microsoft" width="80">
-                    <img src="/img/lg.jpg" alt="LG Life is good" width="80">
+                    <img src="{{ asset('img/apple.jpg') }}" alt="Apple" width="80">
+                    <img src="{{ asset('img/blackberry.jpg') }}" alt="Blackberry" width="80">
+                    <img src="{{ asset('img/hp.jpg') }}" alt="HP" width="80">
+                    <img src="{{ asset('img/dell.jpg') }}" alt="Dell" width="80">
+                    <img src="{{ asset('img/samsung.jpg') }}" alt="Samsung" width="80">
+                    <img src="{{ asset('img/panasonic.jpg') }}" alt="Panasonic" width="80">
+                    <img src="{{ asset('img/htc.jpg') }}" alt="HTC" width="80">
+                    <img src="{{ asset('img/motorola.jpg') }}" alt="Motorola" width="80">
+                    <img src="{{ asset('img/nokia.jpg') }}" alt="Nokia" width="80">
+                    <img src="{{ asset('img/sony.jpg') }}" alt="Sony" width="80">
+                    <img src="{{ asset('img/microsoft.jpg') }}" alt="Microsoft" width="80">
+                    <img src="{{ asset('img/lg.jpg') }}" alt="LG Life is good" width="80">
                 </p>
             </div>
         </div>

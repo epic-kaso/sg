@@ -55,7 +55,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-4 col-sm-offset-3">
-                            <img src="/img/gadget_swap_logo.png" style="
+                            <img src="{{ asset('img/gadget_swap_logo.png') }}" style="
     margin-left: auto;
     margin-right: auto;
 ">
@@ -267,12 +267,12 @@
     </div>
 </section>
 <!-- jQuery Version 1.11.0 -->
-<script src="/landing-page/js/jquery-1.11.0.js"></script>
+<script src="{{ asset('landing-page/js/jquery-1.11.0.js') }}"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="/landing-page/js/bootstrap.min.js"></script>
+<script src="{{ asset('landing-page/js/bootstrap.min.js') }}"></script>
 <!-- Plugin JavaScript -->
-<script src="/landing-page/js/jquery.easing.min.js"></script>
+<script src="{{ asset('landing-page/js/jquery.easing.min.js') }}"></script>
 <!-- Custom Theme JavaScript -->
-<script src="/landing-page/js/grayscale.js"></script>
+<script src="{{ asset('landing-page/js/grayscale.js') }}"></script>
 </body>
 </html>

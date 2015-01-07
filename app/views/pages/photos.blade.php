@@ -11,18 +11,19 @@
     <div class="col-sm-9">
 
         <div class="col-sm-4">
-            <a href="assets/img/SuperGeeks-fix-install-service.jpg" data-lightbox="roadtrip">
-                <img src="assets/img/SuperGeeks-fix-install-service.jpg" class="img-responsive img-thumbnail"/>
+            <a href="{{ asset('assets/img/SuperGeeks-fix-install-service.jpg') }}" data-lightbox="roadtrip">
+                <img src="{{ asset('assets/img/SuperGeeks-fix-install-service.jpg') }}"
+                     class="img-responsive img-thumbnail"/>
             </a>
         </div>
         <div class="col-sm-4">
-            <a href="img/gadget_swap.png" data-lightbox="roadtrip">
-                <img src="img/gadget_swap.png" class="img-responsive img-thumbnail"/>
+            <a href="{{ asset('img/gadget_swap.png') }}" data-lightbox="roadtrip">
+                <img src="{{ asset('img/gadget_swap.png') }}" class="img-responsive img-thumbnail"/>
             </a>
         </div>
         <div class="col-sm-4">
-            <a href="img/slider-3.png" data-lightbox="roadtrip">
-                <img src="img/slider-3.png" class="img-responsive img-thumbnail"/>
+            <a href="{{ asset('img/slider-3.png') }}" data-lightbox="roadtrip">
+                <img src="{{ asset('img/slider-3.png') }}" class="img-responsive img-thumbnail"/>
             </a>
         </div>
 

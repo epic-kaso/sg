@@ -12,7 +12,8 @@
         <h4>The SuperGeeks Code of Conduct</h4>
 
         <div class="SG-mascot">
-            <img src="/img/Supergeeks-mascot-on-blue.png" alt="SuperGeeks Mascot - SuperGeeks Code of Conduct"
+            <img src="{{ asset('img/Supergeeks-mascot-on-blue.png') }}"
+                 alt="SuperGeeks Mascot - SuperGeeks Code of Conduct"
                  width="250">
         </div>
 

@@ -6,7 +6,7 @@
             <ul class="service">
                 <li>
                     <div class="service-icon">
-                        <img src="/img/fix-and-repair.png" alt="SuperGeeks fix and repairs">
+                        <img src="{{ asset('img/fix-and-repair.png') }}" alt="SuperGeeks fix and repairs">
                     </div>
 
                     <div class="service-content">
@@ -30,7 +30,7 @@
 
                 <li>
                     <div class="service-icon">
-                        <img src="/img/diagnostics.png" alt="SuperGeeks diagnostics">
+                        <img src="{{ asset('img/diagnostics.png') }}" alt="SuperGeeks diagnostics">
                     </div>
 
                     <div class="service-content">
@@ -55,7 +55,7 @@
 
                 <li>
                     <div class="service-icon">
-                        <img src="/img/health-checks.png" alt="SuperGeeks Schedule Health Checks">
+                        <img src="{{ asset('img/health-checks.png') }}" alt="SuperGeeks Schedule Health Checks">
                     </div>
 
                     <div class="service-content">
@@ -78,7 +78,7 @@
 
                 <li>
                     <div class="service-icon">
-                        <img src="/img/installation.png" alt="SuperGeeks Installation">
+                        <img src="{{ asset('img/installation.png') }}" alt="SuperGeeks Installation">
                     </div>
 
                     <div class="service-content">
@@ -112,7 +112,7 @@
 
                 <li>
                     <div class="service-icon">
-                        <img src="/img/emergency.png" alt="SuperGeeks Emergency Response">
+                        <img src="{{ asset('img/emergency.png') }}" alt="SuperGeeks Emergency Response">
                     </div>
 
                     <div class="service-content">
@@ -131,7 +131,7 @@
 
                 <li>
                     <div class="service-icon">
-                        <img src="/img/consultation.png" alt="SuperGeeks Servies and Supply Consultation">
+                        <img src="{{ asset('img/consultation.png') }}" alt="SuperGeeks Servies and Supply Consultation">
                     </div>
 
                     <div class="service-content">

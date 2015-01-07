@@ -1,7 +1,8 @@
 <div class="container">
     <div class="wrapper sgp">
         <div class="sgp-hero">
-            <img src="/img/sgp-banner.jpg" alt="SuperGeeks Gadget Protection - The only protection you will ever need">
+            <img src="{{ asset('img/sgp-banner.jpg') }}"
+                 alt="SuperGeeks Gadget Protection - The only protection you will ever need">
         </div>
         <div class="inner-wrapper">
 
