@@ -2,6 +2,12 @@
 
 class AuthController extends \BaseController {
 
+
+    function __construct()
+    {
+        $this->beforeFilter('guest');
+    }
+
     public function getLogin(){
         return View::make('auth.login');
     }
