@@ -12,6 +12,14 @@
     */
 
     Route::get('/', 'HomeController@index');
-    Route::get('/{anything}', function ($anything) {
-        return View::make('pages.' . $anything);
+    Route::get('/gadget-swap',function(){
+        return View::make('pages.index');
     });
+    Route::get('/{anything}', function ($anything) {
+        try {
+            return View::make('pages.' . $anything);
+        }catch (InvalidArgumentException $ex){
+            App::abort(404);
+        }
+    });
+
