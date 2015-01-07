@@ -1,3 +1,6 @@
+@extends('layouts.website')
+
+@section('content')
 <div class="container">
     <div class="wrapper services">
         <div class="inner-wrapper">
@@ -152,3 +155,4 @@
         </div>
     </div>
 </div>
+@stop

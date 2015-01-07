@@ -1,3 +1,6 @@
+@extends('layouts.website')
+
+@section('content')
 <div class="container">
     <div class="wrapper sgp">
         <div class="sgp-hero">
@@ -54,3 +57,4 @@
         </div>
     </div>
 </div>
+@stop

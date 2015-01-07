@@ -11,6 +11,8 @@
     |
     */
 
+    use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
     ClassLoader::addDirectories(array(
 
         app_path() . '/commands',
@@ -65,6 +67,10 @@
         return Response::make("Be right back!", 503);
     });
 
+
+    App::error(function (NotFoundHttpException $ex) {
+        return View::make('errors.404');
+    });
     /*
     |--------------------------------------------------------------------------
     | Require The Filters File

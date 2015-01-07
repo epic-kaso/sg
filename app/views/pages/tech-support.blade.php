@@ -1,3 +1,6 @@
+@extends('layouts.website')
+
+@section('content')
 <div class="container">
     <div class="main row">
         <h1 class="page-header">Tech Support</h1>
@@ -23,7 +26,7 @@
                     <h4 class="dPanel_title">Diagnostics and Troubleshooting</h4>
 
                     <div class="dPanel_icon">
-                        <img src="/img/supergeeks-diagnosis-troubleshooting.svg"
+                        <img src="{{ asset('img/supergeeks-diagnosis-troubleshooting.svg') }}"
                              alt="SuperGeeks Diagnosis and Troubleshooting" width="120">
                     </div>
 
@@ -45,7 +48,8 @@
                     <h4 class="dPanel_title">Scheduled Health Checks</h4>
 
                     <div class="dPanel_icon">
-                        <img src="/img/supergeeks-health-checks.svg" alt="SuperGeeks Health Checks" width="120">
+                        <img src="{{ asset('img/supergeeks-health-checks.svg') }}" alt="SuperGeeks Health Checks"
+                             width="120">
                     </div>
 
                     <p>
@@ -64,7 +68,8 @@
                     <h4 class="dPanel_title">Services &amp; Supply Consultation</h4>
 
                     <div class="dPanel_icon">
-                        <img src="/img/supergeeks-consultation.svg" alt="SuperGeeks Services and Supply Consultation"
+                        <img src="{{ asset('img/supergeeks-consultation.svg') }}"
+                             alt="SuperGeeks Services and Supply Consultation"
                              width="120">
                     </div>
 
@@ -82,7 +87,7 @@
                     <h4 class="dPanel_title">Device Installation and Configuration</h4>
 
                     <div class="dPanel_icon">
-                        <img src="/img/supergeeks-device-installation.svg"
+                        <img src="{{ asset('img/supergeeks-device-installation.svg') }}"
                              alt="SuperGeeks Diagnosis and Troubleshooting" width="120">
                     </div>
 
@@ -114,7 +119,8 @@
                     <h4 class="dPanel_title">Emergency Response</h4>
 
                     <div class="dPanel_icon">
-                        <img src="/img/supergeeks-emergency-response.svg" alt="SuperGeeks Diagnosis and Troubleshooting"
+                        <img src="{{ asset('img/supergeeks-emergency-response.svg') }}"
+                             alt="SuperGeeks Diagnosis and Troubleshooting"
                              width="120">
                     </div>
 
@@ -163,3 +169,4 @@
         </div>
     </div>
 </div>
+@stop

@@ -1,3 +1,6 @@
+@extends('layouts.website')
+
+@section('content')
 <div class="container">
     <div class="main row">
         <h1 class="page-header">Privacy Policy</h1>
@@ -162,3 +165,5 @@
 
     </div>
 </div>
+
+@stop

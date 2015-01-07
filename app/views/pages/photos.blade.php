@@ -1,3 +1,6 @@
+@extends('layouts.website')
+
+@section('content')
 <div class="container" style="min-height: 600px;">
 
     <div class="col-sm-3" style="padding-left: 0;">
@@ -29,3 +32,4 @@
 
     </div>
 </div>
+@stop

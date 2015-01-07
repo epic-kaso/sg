@@ -1,8 +1,11 @@
+@extends('layouts.website')
+
+@section('content')
 <div class="container">
     <div class="main row">
         <div class="row">
             <div class="col-sm-3 column">
-                <img src="/img/sgp-logo.svg" alt="SuperGeeks Gadget Protection (SGP)">
+                <img src="{{ asset('img/sgp-logo.svg') }}" alt="SuperGeeks Gadget Protection (SGP)">
             </div>
 
             <div class="col-sm-9 column">
@@ -494,3 +497,4 @@
         </div>
     </div>
 </div>
+@stop
