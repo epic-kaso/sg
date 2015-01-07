@@ -13,6 +13,7 @@
 
     Route::get('/', 'HomeController@index');
     Route::get('/swap','GadgetSwapController@getClient');
+    Route::controller('/enterprise','EnterprisePagesController');
 
     Route::get('/devices','GadgetSwapController@getIndex');
     Route::post('/devices/add-maker','GadgetSwapController@postAddMake');

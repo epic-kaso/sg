@@ -28,12 +28,11 @@
     <link href="{{ asset('css/lightbox.css')  }}" rel="stylesheet"/>
 </head>
 <body>
-
 <div class="container">
     <div class="navbar navbar-supergeeks navbar-static-top">
         <ul class="nav navbar-nav">
-            <li><a href="/" class="current">Personal</a></li>
-            <li><a href="/enterprise">Enterprise</a></li>
+            <li><a href="/">Personal</a></li>
+            <li><a href="/enterprise" class="current">Enterprise</a></li>
         </ul>
 
         <ul class="supergeeks-social-icons pull-right" style="
@@ -44,157 +43,10 @@
             <li><a href="#contact-info-dialog" data-toggle="modal">
                     <span class="glyphicon glyphicon-envelope"></span></a></li>
             <li><a href="http://www.instagram.com/teamsupergeeks"><span class="icon-instagram"></span></a></li>
-            <li><a href="https://twitter.com/TeamSuperGeeks" title="Supergeeks on Twitter"><span
-                            class="icon-twitter"></span></a></li>
-            <li><a href="https://www.facebook.com/SuperGeeksAfrica" title="Supergeeks on facebook"><span
-                            class="icon-facebook"></span></a></li>
+            <li><a href="https://twitter.com/TeamSuperGeeks" title="Supergeeks on Twitter"><span class="icon-twitter"></span></a></li>
+            <li><a href="https://www.facebook.com/SuperGeeksAfrica" title="Supergeeks on facebook"><span class="icon-facebook"></span></a></li>
         </ul>
     </div>
 </div>
-
-<div class="container header-box">
-    <div class="row">
-        <div class="col-sm-3 supergeeks-logo">
-            <a href="/">
-                <img class="img-responsive" src="{{ asset('img/supergeeks-logo-tagline.png')  }}"
-                     alt="SuperGeeks - If we can't fix it, no one can">
-            </a>
-        </div>
-        <div class="col-sm-3 my-pull-right">
-            <button class="btn btn-lg btn-warning center-block" data-offload="/repair-quote-widget" style="
-    margin-top: 18px;
-    border: none;
-    border-radius: 3px;
-">
-                <strong>Quick Repair Quote</strong>
-            </button>
-        </div>
-
-        <div class="col-sm-6">
-            <div>
-                <ul class="nav nav-justified super-nav text-center">
-                    <li>
-                        <a href="" id="tech-support">
-                            Tech Support
-                            <span class="glyphicon glyphicon-chevron-down center-block"></span>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a href="" id="repairs">Repairs
-                            <span class="glyphicon glyphicon-chevron-down center-block"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" id="team-supergeeks">Team Supergeeks
-                            <span class="glyphicon glyphicon-chevron-down center-block"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</div>
-<div class="container">
-    <div class="drop-menu-bar">
-        <ul data-menu-id="tech-support" class="nav nav-justified text-center">
-            <li>&nbsp;</li>
-            <li>
-                <a href="/tech-support">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl00_imgMenu1"
-                             src="{{ asset('images/icons/cat_computers.png')  }}" alt="computersnetworking"></div>
-                    Support Services</a>
-            </li>
-
-            <li>
-                <a href="/sgp">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl01_imgMenu1"
-                             src="{{ asset('images/icons/cat_tvVideo.png')  }}" alt="tv_video"></div>
-                    Gadget Protection</a>
-            </li>
-
-            <li>
-                <a href="" data-toggle="modal" data-target="#gadget-repair-quote">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl02_imgMenu1"
-                             src="{{ asset('images/icons/cat_phone.png')  }}" alt="phones_tablets"></div>
-                    Do-It-Your-Self</a>
-            </li>
-
-            <li>
-                &nbsp;
-            </li>
-        </ul>
-        <ul data-menu-id="repairs" class="nav nav-justified text-center">
-            <li>
-                <a href="/fix-and-repairs">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl00_imgMenu1"
-                             src="{{ asset('images/icons/cat_computers.png')  }}" alt="computersnetworking"></div>
-                    Computers</a>
-            </li>
-
-            <li>
-                <a href="/fix-and-repairs">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl01_imgMenu1"
-                             src="{{ asset('images/icons/cat_tvVideo.png')  }}" alt="tv_video"></div>
-                    Home Theater</a>
-            </li>
-
-            <li>
-                <a href="/fix-and-repairs">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl02_imgMenu1"
-                             src="{{ asset('images/icons/cat_phone.png')  }}" alt="phones_tablets"></div>
-                    Portable &amp; Mobile</a>
-            </li>
-
-            <li>
-                <a href="/fix-and-repairs">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl03_imgMenu1"
-                             src="{{ asset('images/icons/cat_carGps.png')  }}" alt="car_gps"></div>
-                    Car &amp; GPS</a>
-            </li>
-
-            <li>
-                <a href="/fix-and-repairs">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl04_imgMenu1"
-                             src="{{ asset('images/icons/cat_appliances.png')  }}" alt="appliances"></div>
-                    Appliances</a>
-            </li>
-        </ul>
-        <ul data-menu-id="team-supergeeks" class="nav nav-justified text-center">
-            <li>&nbsp;</li>
-            <li>
-                <a href="/about">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl00_imgMenu1"
-                             src="{{ asset('images/icons/cat_computers.png')  }}" alt="computersnetworking"></div>
-                    About Us</a>
-            </li>
-
-            <li>
-                <a href="/contact">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl01_imgMenu1"
-                             src="{{ asset('images/icons/cat_tvVideo.png')  }}" alt="tv_video"></div>
-                    Contact Us</a>
-            </li>
-
-            <li>
-                <a href="/contact">
-                    <div class="imgWrap">
-                        <img id="ctl00_dynamicGeekSquadHeader_CategoriesRepeater_ctl02_imgMenu1"
-                             src="{{ asset('images/icons/cat_phone.png')  }}" alt="phones_tablets"></div>
-                    Talk to Us</a>
-            </li>
-            <li>&nbsp;</li>
-        </ul>
-    </div>
-</div>
+@yield('content')
+@include('pages.partials.footer')
