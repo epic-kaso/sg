@@ -230,12 +230,11 @@
             <div  class="form-group">
                 <label>Select Device Make</label>
                 <select class="form-control" name="gadget_maker_id" ng-model="device_make_name">
-                    <?php if(isset($models) && is_array($models)){
-                        foreach($models as $value){
-                            ?> <option value="{{ $value->id }}">{{ $value->name }}</option>
-                    <?php
-                        }
-                    } ?>
+                    @if(isset($models))
+                        @foreach($models as $value)
+                            <option value="{{ $value->id }}">{{ $value->name }}</option>
+                        @endforeach
+                    @endif
                 </select>
             </div>
 
@@ -368,7 +367,7 @@
                    $http.delete(url).then(function(response){
                        location.reload();
                    },function(response){
-                       location.reload();
+                       alert(response);
                    });
                 }
             }

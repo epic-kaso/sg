@@ -14,13 +14,11 @@ class GadgetSwapController extends \BaseController {
 
     function getIndex() {
         $model = Input::get('model', null);
-
-        $gadgetMakers = GadgetMaker::
-        with('gadget_maker,sizes,colors,base_line_prices')->get();
+        $gadgetMakers = GadgetMaker::get();
         $networks = Network::get();
 
         if (empty($model)) {
-            $neededGadgets = Gadget::get();
+            $neededGadgets = Gadget::with(['gadget_maker','sizes','colors','base_line_prices'])->get();
         } else {
             $maker = GadgetMaker::findOrFail($model);
             $neededGadgets = $maker->gadgets;
@@ -114,12 +112,17 @@ class GadgetSwapController extends \BaseController {
 
         $sizes = explode(',', $data['sizes']);
         foreach ($sizes as $size) {
-            $make->create_sizes(array('value' => trim($size)));
+            $make->sizes()->save(new Size(array('value' => trim($size))));
         }
 
         $baselines = \BaseLinePrice::extractBaseLinePrices($data['baselines']);
         foreach ($baselines as $key => $value) {
-            $make->create_base_line_prices(array('size' => trim($key), 'value' => trim($value)));
+            $make->base_line_prices()->save(
+                new BaseLinePrice(
+                    array('size' => trim($key), 'value' => trim($value)
+                    )
+                )
+            );
         }
 
         if(isset($data['device_image_url'])){

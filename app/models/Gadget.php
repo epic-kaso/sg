@@ -14,10 +14,6 @@
         return $this->hasMany('BaseLinePrice');
     }
 
-    static $belongs_to = array(
-        array('gadget_maker','class_name'=>'GadgetMaker')
-    );
-
     public function gadget_maker(){
         return $this->belongsTo('GadgetMaker');
     }
@@ -25,21 +21,31 @@
     public function destroyEveryData(){
         $this->deleteRelationships(array('colors','sizes','base_line_prices'));
         $this->delete();
-
     }
+
     private function deleteRelationships($relationship){
         if(is_array($relationship)){
             foreach($relationship as $r){
                 $relations = $this->{$r};
-                foreach($relations as $b){
+                $this->deleteThisRelationship($relations);
+            }
+            return true;
+        }else{
+            $relations = $this->{$relationship};
+            return $this->deleteThisRelationship($relations);
+        }
+    }
+
+        /**
+         * @param $relations
+         */
+        private function deleteThisRelationship($relations)
+        {
+            if (count($relations) > 0) {
+                foreach ($relations as $b) {
                     $b->delete();
                 }
             }
-        }else{
-            $relations = $this->{$relationship};
-            foreach($relations as $b){
-                $b->delete();
-            }
+            return true;
         }
     }
-}
