@@ -1,7 +1,6 @@
 <?php
-    use Eloquent as Model;
 
-class GadgetMaker extends Model{
+    class GadgetMaker extends BaseModel{
 
 
     //Conditions

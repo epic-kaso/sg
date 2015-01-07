@@ -1,7 +1,6 @@
 <?php
-    use Eloquent as Model;
 
-class Gadget extends Model{
+    class Gadget extends BaseModel{
 
     public function sizes(){
         return $this->hasMany('Size');

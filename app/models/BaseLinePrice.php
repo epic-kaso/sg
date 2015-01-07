@@ -1,8 +1,7 @@
 <?php
 
-use Eloquent as Model;
 
-class BaseLinePrice extends Model {
+class BaseLinePrice extends BaseModel {
 
 
     public function gadget(){
