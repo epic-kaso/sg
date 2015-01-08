@@ -14,6 +14,9 @@
     Route::get('/', ['as' => 'home','uses' => 'HomeController@index']);
     Route::get('/swap','GadgetSwapController@getClient');
     Route::controller('/enterprise','EnterprisePagesController');
+    Route::get('/cpanel',function(){
+        return Redirect::away('http://197.189.233.4/cpanel');
+    });
 
     Route::get('/login',['uses' => 'AuthController@getLogin','as' => 'get-login']);
     Route::post('/login',['uses' => 'AuthController@postLogin','as' => 'post-login']);
