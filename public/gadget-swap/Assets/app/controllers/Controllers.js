@@ -15,7 +15,7 @@ app.controller('NavbarController', [
 ]);
 
 app.controller('DeviceMakeController', function ($scope,Makes,$rootScope) {
-    $rootScope.tiny_heading = 'Get ₦ value of your Gadget, Swap Now.';
+    $rootScope.tiny_heading = 'Get <span style="font-size: 30px;color: green;">₦</span> value of your Gadget, Swap Now.';
     $rootScope.big_heading = 'First, Select your Gadget Make';
     $rootScope.device_make = 'others';
 

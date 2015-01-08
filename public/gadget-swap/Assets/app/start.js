@@ -9,6 +9,7 @@ var app = angular.module('SupergeeksWidget',
         'ui.bootstrap',
         'ngCookies',
         'ngAnimate',
+        'ngSanitize',
         'SupergeeksWidget.Controllers',
         'SupergeeksWidget.Services',
         'SupergeeksWidget.directives'

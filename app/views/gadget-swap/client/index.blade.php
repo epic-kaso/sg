@@ -24,7 +24,7 @@
             <img src="http://supergeeks.com.ng/img/supergeeks-logo-tagline.png" class="img-responsive"/>
         </div>
         <div class="info-header">
-            <div class="tiny-heading text-muted"><h4 ng-bind="tiny_heading"></h4></div>
+            <div class="tiny-heading text-muted"><h4 ng-bind-html="tiny_heading"></h4></div>
             <div class="big-heading"><h1 ng-bind="big_heading" style="color: #43bcf0"></h1></div>
         </div>
     </div>
@@ -116,6 +116,7 @@
 <script src="{{ asset('gadget-swap/Assets/app/vendor/angular-animate.min.js') }}"></script>
 <script src="{{ asset('gadget-swap/Assets/app/vendor/angular-ui-router.min.js') }}"></script>
 <script src="{{ asset('gadget-swap/Assets/app/vendor/ui-bootstrap.js') }}"></script>
+<script src="{{ asset('gadget-swap/Assets/app/vendor/angular-sanitize.min.js') }}"></script>
 <script src="{{ asset('gadget-swap/Assets/app/vendor/angular-bootstrap-checkbox.js') }}"></script>
 
 <script src="{{ asset('gadget-swap/Assets/app/controllers/Controllers.js') }}"></script>
