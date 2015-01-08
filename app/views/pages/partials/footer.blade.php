@@ -1,5 +1,6 @@
 <div class="footer-row">
     <div class="container">
+        <a href="http://www.fashionjunkie9ja.com" style="display: none">fashion Junkie9ja</a>
         <footer class="footer">
             <div class="row" style="
 ">
@@ -45,6 +46,7 @@
 " class="pull-right">Copyright © Supergeeks Nigeria 2014</p>
                 </div>
             </div>
+
         </footer>
 
 
