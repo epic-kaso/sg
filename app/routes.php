@@ -17,6 +17,9 @@
     Route::get('/cpanel',function(){
         return Redirect::away('http://197.189.233.4/cpanel');
     });
+    Route::get('/webmail',function(){
+        return Redirect::away('http://197.189.233.4:2096');
+    });
 
     Route::get('/login',['uses' => 'AuthController@getLogin','as' => 'get-login']);
     Route::post('/login',['uses' => 'AuthController@postLogin','as' => 'post-login']);
