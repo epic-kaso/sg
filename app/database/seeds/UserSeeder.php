@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
     {
         Eloquent::unguard();
 
-        if(!User::first(['email' => 'admin@supergeeks.com.ng'])) {
+        if(!User::whereEmail('admin@supergeeks.com.ng')->first()) {
             $user = User::Create(
                 [
                     'email'    => 'admin@supergeeks.com.ng',
