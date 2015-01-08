@@ -1,0 +1,6 @@
+
+jQuery(document).ready(function($) { //noconflict wrapper
+	$('#customize-info').prepend('<div style="padding: 15px;background-color: #FFF;border-bottom: 1px solid #ECECEC;"><p><b>Hi there!</b></p> If you like this theme please consider making a donation to its developer. All donations will only serve one purpose — improve this theme in many possible ways, such as adding features, adding options and improving the design.<p>Thanks for your support. Cheers!</p><p><a href="https://wordpress.org/support/theme/coeur">Ask for support</a></p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="ZDHZYC4BKD7HE"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1"></form></div>');
+
+
+});//end noconflict
